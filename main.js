@@ -14,17 +14,17 @@
         // Detect language (optional)
         var lang = (function() {
             var locq = window.location.search;
-                var map = {
-                    pt: 'pt_BR',
-                    ug: 'ug_CN',
-                    zh: 'zh_CN'
-                };
-                var full = {
-                    zh_tw: 'zh_TW',
-                    zh_cn: 'zh_CN',
-                    fr_ca: 'fr_CA'
-                };
-                var fullLang; var locm; var lang;
+            var map = {
+                pt: 'pt_BR',
+                ug: 'ug_CN',
+                zh: 'zh_CN'
+            };
+            var full = {
+                zh_tw: 'zh_TW',
+                zh_cn: 'zh_CN',
+                fr_ca: 'fr_CA'
+            };
+            var fullLang; var locm; var lang;
             if (locq && (locm = locq.match(/lang=([a-zA-Z_-]+)/))) {
                 // detection by url query (?lang=xx)
                 fullLang = locm[1];
