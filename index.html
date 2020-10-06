@@ -8,7 +8,7 @@
 
         <!-- Require JS (REQUIRED) -->
         <!-- Rename "main.default.js" to "main.js" and edit it if you need configure elFInder options or any things -->
-        <script data-main="./main.default.js" src="./require.js/2.3.6/require.min.js"></script>
+        <script data-main="./main.js" src="./require.js/2.3.6/require.min.js"></script>
         <script>
             define('elFinderConfig', {
                 // elFinder options (REQUIRED)
@@ -19,10 +19,20 @@
                     cssAutoLoad : ['themes/Material/css/theme-gray.css'],
                     url : 'php/connector.minimal.php', // or connector.maximal.php : connector URL (REQUIRED)
                     commands : [
-                        'custom','open', 'reload', 'home', 'up', 'back', 'forward', 'getfile', 'quicklook', 
-                        'download', 'rm', 'duplicate', 'rename', 'mkdir', 'mkfile', 'upload', 'copy', 
-                        'cut', 'paste', 'edit', 'extract', 'archive', 'search', 'info', 'view', 'help',
-                        'resize', 'sort', 'netmount'
+                        'home', 'up', 'back', 'forward', 'reload',
+                        'netmount',
+                        'mkdir', 'mkfile', 'upload',
+                        'open', 'download', 'getfile',
+                        'undo', 'redo',
+                        'copy', 'cut', 'paste', 'rm', 'empty', 'hide',
+                        'duplicate', 'rename', 'edit', 'resize', 'chmod',
+                        'selectall', 'selectnone', 'selectinvert',
+                        'quicklook', 'info',
+                        'extract', 'archive',
+                        'search',
+                        'view', 'sort',
+                        'preference', // 'help',
+                        // 'fullscreen'
                     ],
                     contextmenu : {
                         // navbarfolder menu
