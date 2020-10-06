@@ -6,6 +6,7 @@ define('elFinderConfig', {
         // cssAutoLoad : ['themes/windows-10/css/theme.css'],
         cssAutoLoad: ['themes/Material/css/theme-gray.css'],
         url: 'php/connector.minimal.php', // or connector.maximal.php : connector URL (REQUIRED)
+        height: '100%',
         commands: [
             'home', 'up', 'back', 'forward', 'reload',
             'netmount',
