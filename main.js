@@ -47,7 +47,7 @@
         // Start elFinder (REQUIRED)
         var start = function(elFinder, editors, config) {
             // load jQueryUI CSS
-            elFinder.prototype.loadCss('//cdnjs.cloudflare.com/ajax/libs/jqueryui/' + uiver + '/themes/smoothness/jquery-ui.css');
+            elFinder.prototype.loadCss('../jqueryui/' + uiver + '/themes/smoothness/jquery-ui.css');
 
             $(function() {
                 var optEditors = {
@@ -124,8 +124,8 @@
     require.config({
         baseUrl: 'js',
         paths: {
-            jquery: '//cdnjs.cloudflare.com/ajax/libs/jquery/' + (old ? '1.12.4' : jqver) + '/jquery.min',
-            'jquery-ui': '//cdnjs.cloudflare.com/ajax/libs/jqueryui/' + uiver + '/jquery-ui.min',
+            jquery: '../jquery/' + (old ? '1.12.4' : jqver) + '/jquery.min',
+            'jquery-ui': '../jqueryui/' + uiver + '/jquery-ui.min',
             elfinder: 'elfinder.min',
             'encoding-japanese': '//cdn.rawgit.com/polygonplanet/encoding.js/1.0.26/encoding.min'
         },
