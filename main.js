@@ -47,7 +47,7 @@
         // Start elFinder (REQUIRED)
         var start = function(elFinder, editors, config) {
             // load jQueryUI CSS
-            elFinder.prototype.loadCss('../jqueryui/' + uiver + '/themes/smoothness/jquery-ui.css');
+            elFinder.prototype.loadCss('jqueryui/' + uiver + '/themes/smoothness/jquery-ui.css');
 
             $(function() {
                 var optEditors = {
