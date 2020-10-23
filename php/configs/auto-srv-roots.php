@@ -11,7 +11,7 @@ function get_root($path, $alias) {
     'alias'         => $alias,
     'driver'        => 'LocalFileSystem',
     'path'          => $path, 
-    'URL'           => dirname($_SERVER['PHP_SELF']) . '/../files/'. folder,
+    'URL'           => dirname($_SERVER['PHP_SELF']) . '/../files/'. $folder,
     //'trashHash'     => 't0_Lw',
     'winHashFix'    => DIRECTORY_SEPARATOR !== '/',
     'uploadDeny'    => array('all'),
