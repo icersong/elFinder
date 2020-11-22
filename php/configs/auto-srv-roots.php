@@ -42,7 +42,7 @@ function get_label($dev) {
 }
 
 
-$buffer = get_exec("mount |grep /srv/dev-disk-by- |awk -F'[ ]' '{print $1 \" \" $3}'");
+$buffer = get_exec("mount |grep ' on /srv/'|awk -F'[ ]' '{print $1 \" \" $3}'");
 foreach(explode("\n",$buffer) as $line) {
     if (trim($line) === '') { continue; }
     system('echo "'.$line.'" >> '.'/tmp/xxxx.log');
