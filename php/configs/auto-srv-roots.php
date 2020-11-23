@@ -14,8 +14,9 @@ function get_root($path, $alias) {
     'URL'           => dirname($_SERVER['PHP_SELF']) . '/../files/'. $folder,
     //'trashHash'     => 't0_Lw',
     'winHashFix'    => DIRECTORY_SEPARATOR !== '/',
-    'uploadDeny'    => array('all'),
-    'uploadAllow'   => array('image/x-ms-bmp', 'image/gif', 'image/jpeg', 'image/png', 'image/x-icon', 'text/plain'),
+    //'uploadDeny'    => array('all'),
+    //'uploadAllow'   => array('image/x-ms-bmp', 'image/gif', 'image/jpeg', 'image/png', 'image/x-icon', 'text/plain'),
+    'uploadAllow'    => array('all'),
     'uploadOrder'   => array('deny', 'allow'),
     'accessControl' => 'access'
   );
