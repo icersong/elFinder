@@ -175,19 +175,22 @@ $opts = array(
 );
 
 // 加载更多的配置
-define('ROOT_DIR', dirname(__FILE__).'/');
-define('CONFIG_ROOT_DIR', ROOT_DIR.'configs/');
-if (is_dir(CONFIG_ROOT_DIR)){
-  if ($dh = opendir(CONFIG_ROOT_DIR)){
-    while (($file = readdir($dh)) !== false){
-        if (substr($file, -4) !== '.php') {
-            continue;
+function load_configs() {
+    define('ROOT_DIR', dirname(__FILE__).'/');
+    define('CONFIG_ROOT_DIR', ROOT_DIR.'configs/');
+    if (is_dir(CONFIG_ROOT_DIR)){
+      if ($dh = opendir(CONFIG_ROOT_DIR)){
+        while (($file = readdir($dh)) !== false){
+            if (substr($file, -4) !== '.php') {
+                continue;
+            }
+            require CONFIG_ROOT_DIR.$file;
         }
-        require CONFIG_ROOT_DIR.$file;
+        closedir($dh);
+      }
     }
-    closedir($dh);
-  }
 }
+load_configs();
 
 // run elFinder
 $connector = new elFinderConnector(new elFinder($opts));
